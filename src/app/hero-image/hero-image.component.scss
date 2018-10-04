@@ -1,12 +1,18 @@
 $break-small: 670px;
 $break-large: 1654px;
 
-#image {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../../assets/hero.jpg');
+.theme{
     width: 100%;
     height: 75%;
-    background-size: cover;
 }
+.theme.image{
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('../../assets/hero.jpg');
+    background-size: cover; 
+}
+.theme.color {
+    background-color: rgba(92, 92, 92, 0.7)
+}
+
 
 .title {
     text-align: center;

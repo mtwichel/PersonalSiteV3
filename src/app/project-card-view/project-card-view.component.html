@@ -1,6 +1,13 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-<!-- <mat-grid-list> -->
-  <mat-grid-tile *ngFor="let project of projects | async">
-   <app-project-card [project]="project"></app-project-card>
-  </mat-grid-tile>
-</mat-grid-list>
+<div
+  fxLayout="row wrap"
+  fxLayout.lt-sm="column"
+  fxLayoutGap="32px"
+  fxLayoutAlign="flax-start">
+ <ng-container *ngFor="let project of projects | async">
+  <app-project-card [project]="project"
+    fxFlex="0 1 calc(33.3% - 32px)"
+    fxFlex.lt-md="0 1 calc(50% - 32px)"
+    fxFlex.lt-sm="100%"
+  ></app-project-card>
+  </ng-container>
+</div>

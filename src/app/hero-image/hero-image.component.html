@@ -1,7 +1,7 @@
 <div parallax [config]="{
-	initialValue: 30,
-	ratio: -.2
-}" id="image">
+	initialValue: 10,
+	ratio: -.1
+}" class="theme" [ngClass]="{'image': loaded, 'color': !loaded}">
 
   <div class="title"><span id="title">Hi! I'm </span> <span id="title-emphasis">Marcus Twichel</span></div>
 </div>

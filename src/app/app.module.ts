@@ -18,6 +18,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { ProjectCardViewComponent } from './project-card-view/project-card-view.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomNavComponent } from './custom-nav/custom-nav.component';
+
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -25,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     HeroImageComponent,
     ProjectCardComponent,
-    ProjectCardViewComponent
+    ProjectCardViewComponent,
+    CustomNavComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFirestoreModule,
     AngularFireStorageModule,
     HttpClientModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

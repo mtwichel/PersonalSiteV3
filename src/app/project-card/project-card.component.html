@@ -3,11 +3,11 @@
       <mat-card-title class="title">{{ project.title }}</mat-card-title>
       <mat-card-subtitle *ngIf="dateString">Last updated {{dateString}}</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [attr.src]="project.imageUrl" alt="Photo of a Shiba Inu">
+    <img mat-card-image *ngIf="project.imageUrl" [attr.src]="project.imageUrl" [attr.alt]="project.title">
     <mat-card-content>
       <p> {{project.description}} </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button *ngFor="let link of project.links">{{link.text | uppercase}}</button>
+      <a mat-button [attr.href]="link.url" *ngFor="let link of project.links">{{link.text | uppercase}}</a>
     </mat-card-actions>
   </mat-card>
